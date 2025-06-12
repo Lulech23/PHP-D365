@@ -1,16 +1,16 @@
 <?php 
 
 /********************************************************
- *							*
- * PHP D365 Lightweight API Wrapper			*
- * by Lulech23						*
- * 							*
+ *														*
+ * PHP D365 Lightweight API Wrapper						*
+ * by Lulech23											*
+ * 														*
  ******************************************************** 
- *							*
- * Repository: https://github.com/Lulech23/PHP-D365	*
+ *														*
+ * Repository: https://github.com/Lulech23/PHP-D365		*
  *  - Forked From: https://github.com/RobbeR/RDynamics	*
- * Version: v2.6.1					*
- *							*
+ * Version: v2.6.2										*
+ *														*
  ********************************************************/
 
 /* 
@@ -180,7 +180,7 @@ class Dynamics {
 					
 										case 'Microsoft.Dynamics.CRM.totalrecordcount':
 											return [
-												"TotalRecordCount" => $value			// <-- Need to identify schema name (only applies to FetchXML - break out to different parser?)
+												"TotalRecordCount" => $value				// <-- Need to identify schema name (only applies to FetchXML - break out to different parser?)
 											];
 										break;
 					
@@ -192,7 +192,7 @@ class Dynamics {
 					
 										case 'Microsoft.Dynamics.CRM.fetchxmlpagingcookie':
 											return [
-												"FetchXMLPagingCookie" => $value		// <-- Need to identify schema name (only applies to FetchXML - break out to different parser?)
+												"FetchXMLPagingCookie" => $value			// <-- Need to identify schema name (only applies to FetchXML - break out to different parser?)
 											];
 										break;
 					
@@ -641,7 +641,7 @@ class Dynamics {
 						"If-None-Match: null",
 						"OData-MaxVersion: 4.0",
 						"OData-Version: 4.0",
-						"Prefer: respond-async, odata.include-annotations=*"
+						"Prefer: respond-async, return=representation, odata.include-annotations=*"
 					];
 		
 					if ($originMethod != "batch") {
