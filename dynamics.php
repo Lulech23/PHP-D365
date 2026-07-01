@@ -659,7 +659,6 @@ class Dynamics {
 					curl_setopt($curl, CURLOPT_HTTPHEADER, $requestHeaders);
 					curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 					curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
-					curl_setopt($curl, CURLOPT_VERBOSE, 1);
 					curl_setopt($curl, CURLOPT_HEADER, 1);
 					curl_setopt($curl, CURLOPT_ENCODING, "");
 					
